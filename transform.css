@@ -1,8 +1,37 @@
-#box1 {
+body {
+  font-family: Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+.box {
   width: 100px;
   height: 100px;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+
+#box1 {
   background: #d81670;
-  -webkit-transform: translateX(50px) translateY(80px);
-      -ms-transform: translateX(50px) translateY(80px);
-          transform: translateX(50px) translateY(80px);
+  -webkit-transform: translate3D(100px, 300px, 300px);
+      -ms-transform: translate3D(100px, 300px, 300px);
+          transform: translate3D(100px, 300px, 300px);
+}
+
+#box2 {
+  margin-left: 100px;
+  background: #1e26d5;
+  -webkit-transform: scaleX(2) scaleY(.7) scaleZ(4);
+          transform: scaleX(2) scaleY(.7) scaleZ(4);
+}
+
+#box3 {
+  margin-left: 700px;
+  margin-top: 900px;
+  background: #11823a;
+  -webkit-transform: rotate3D(1,1,1,40deg);
+      -ms-transform: rotate3D(1,1,1,40deg);
+          transform: rotate3D(1,1,1,40deg);
+  /* -webkit-transform: rotateX(40deg) rotateY(30deg) rotateZ(30deg);
+          transform: rotateX(40deg) rotateY(30deg) rotateZ(30deg);
+  } */
 }
