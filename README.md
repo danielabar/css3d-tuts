@@ -144,7 +144,7 @@ Leaving the first three args as 0 will have no effect on rotation. Setting X to 
 
 ## 3D Perspective
 
-[HTML](origin-perspective.html) | [CSS](origin-perspective.css)
+[HTML](perspective.html) | [CSS](perspective.css)
 
 Perspective is applied to the _parent_ element of the div having `transform`.
 For example, if `box1` is to be transformed, apply perspective to `container`:
@@ -179,3 +179,27 @@ It must appear as the fist function, for example:
     transform: perspective(500) rotateX(40deg) translateX(400px);
   }
   ```
+
+## Perspective Origin
+
+[HTML](origin.html) | [CSS](origin.css)
+
+Changing the vanishing point, i.e. changing _our_ perspective. Default perspective origin is center.
+But could be for example, top left, top, top right, etc.
+
+Perspective origin css property should be applied to the _same_ element that has the perspective property.
+i.e. `perspective` and `perspective-origin` go together and must be on the parent element.
+
+Must supply two values, X and Y to perspective-origin. Default values are `center center` (or 50% 50%).
+Can be any measurement units that are compatible with css such as pixels, percentages, etc.
+Can also use descriptive positioning like `left`, `top`, etc.
+
+For example to make user's view up to the top and left of the 3D scene:
+
+```css
+.container {
+  perspective: 500px;
+  perspective-origin:left top;
+}
+
+`perspective-origin:100% 100%` be bottom right.
