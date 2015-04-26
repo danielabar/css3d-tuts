@@ -1,0 +1,42 @@
+body {
+  font-family: Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+.container {
+  width: 500px;
+  height: 500px;
+  margin: 0 auto;
+  margin-top: 100px;
+  -webkit-perspective: 500px;
+          perspective: 500px;
+}
+
+.box {
+  width: 200px;
+  height: 200px;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  color: #2a2400;
+  font-size: 24px;
+}
+
+#box1 {
+  background: #d81670;
+  -webkit-animation: anim-seq 4s linear 0s infinite;
+          animation: anim-seq 4s linear 0s infinite;
+}
+
+@-webkit-keyframes anim-seq {
+  0% { -webkit-transform: rotateX(0deg); transform: rotateX(0deg); }
+  25% { -webkit-transform: rotateX(360deg); transform: rotateX(360deg); }
+  75% { -webkit-transform: rotateY(0deg); transform: rotateY(0deg); }
+  100% { -webkit-transform: rotateY(360deg); transform: rotateY(360deg); }
+}
+
+@keyframes anim-seq {
+  0% { -webkit-transform: rotateX(0deg); transform: rotateX(0deg); }
+  25% { -webkit-transform: rotateX(360deg); transform: rotateX(360deg); }
+  75% { -webkit-transform: rotateY(0deg); transform: rotateY(0deg); }
+  100% { -webkit-transform: rotateY(360deg); transform: rotateY(360deg); }
+}

@@ -1,3 +1,18 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](http://doctoc.herokuapp.com/)*
+
+- [CSS 3D Essentials](#css-3d-essentials)
+  - [3D Views](#3d-views)
+    - [Vanishing Points](#vanishing-points)
+  - [CSS 3D Transformations](#css-3d-transformations)
+    - [Translate](#translate)
+    - [Scale](#scale)
+    - [Rotate](#rotate)
+  - [3D Perspective](#3d-perspective)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 CSS 3D Essentials
 ==========
 
@@ -54,7 +69,7 @@ Multiple transform functions can be specified all at once. For example, to move 
   }
   ```
 
-So far, just using X and Y axes moves in 2D space. To move in 3D space, need to also make use of the X axis.
+So far, just using X and Y axes moves in 2D space. To move in 3D space, need to also make use of the Z axis.
 
 In the browser, your default view is looking down at the scene from the top. Therefore the Z axes gives things depth,
 i.e a positive value will move the object closer, whereas a negative value will make the object appear farther away.
@@ -154,3 +169,13 @@ The greater the perspective value, the further back the Z-Plane is pushed.
 
 Note that applying perspective to an element does NOT AFFECT the element itself, it only affects its child elements.
 Perspective property only has an effect on 3D transformed elements, i.e elements having `transform` property.
+
+Another way to apply perspective is as a function on the same line as `transform` attribute BUT ORDER MATTERS.
+It must appear as the fist function, for example:
+
+  ```css
+  #box1 {
+    background: red;
+    transform: perspective(500) rotateX(40deg) translateX(400px);
+  }
+  ```

@@ -2,10 +2,11 @@ body {
   font-family: Helvetica, Arial, "Lucida Grande", sans-serif;
 }
 
-.container {
+/* .container {
   -webkit-perspective: 500px;
           perspective: 500px;
 }
+ */
 
 .box {
   width: 100px;
@@ -13,10 +14,18 @@ body {
   display: table-cell;
   vertical-align: middle;
   text-align: center;
+  color: #2a2400;
+  font-size: 24px;
 }
 
 #box1 {
   background: #d81670;
-  -webkit-transform: rotateX(40deg) translateX(400px);
-          transform: rotateX(40deg) translateX(400px);
+  -webkit-transform: perspective(500px) rotateX(40deg) translateX(400px);
+          transform: perspective(500px) rotateX(40deg) translateX(400px);
+}
+
+#box2 {
+  background: #16d87e;
+  -webkit-transform: perspective(200px) rotateX(40deg) translateX(400px);
+          transform: perspective(200px) rotateX(40deg) translateX(400px);
 }
