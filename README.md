@@ -30,6 +30,8 @@ CSS `transform` property allows us to perform 3 transform functions:
 
 ### Translate
 
+[HTML](transform.html) | [CSS](transform.css)
+
 For example, to move something along the X axis, use `translateX(numUnits)`
 
   ```css
@@ -124,3 +126,31 @@ Fourth argument is the angle in which the element will be rotated, for example:
 Leaving the first three args as 0 will have no effect on rotation. Setting X to 1 will make it rotate 40 degrees in the x axis.
 
 [Read this](http://stackoverflow.com/questions/15207351/rotate3d-shorthand) for more details on rotate3D shorthand syntax.
+
+## 3D Perspective
+
+[HTML](origin-perspective.html) | [CSS](origin-perspective.css)
+
+Perspective is applied to the _parent_ element of the div having `transform`.
+For example, if `box1` is to be transformed, apply perspective to `container`:
+
+  ```html
+  <div class="container">
+		<div id="box1" class="box">Box</div>
+	</div>
+  ```
+
+  ```css
+  .container {
+    perspective: 500px;
+  }
+  ```
+
+Value assigned to perspective makes objects go further back as its increased,
+makes the distance between the view and the object larger. The further back, the more sublte the 3D effect.
+
+When you create a 3D object, a _Z-Plane_ is created. This is like a rendered scene.
+The greater the perspective value, the further back the Z-Plane is pushed.
+
+Note that applying perspective to an element does NOT AFFECT the element itself, it only affects its child elements.
+Perspective property only has an effect on 3D transformed elements, i.e elements having `transform` property.
