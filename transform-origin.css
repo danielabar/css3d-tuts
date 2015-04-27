@@ -1,0 +1,32 @@
+body {
+  font-family: Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+.container {
+  margin: 50px;
+  -webkit-perspective: 500px;
+          perspective: 500px;
+  -webkit-perspective-origin: left top;
+          perspective-origin: left top;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+}
+
+#box1 {
+  background: #d81670;
+  -webkit-transform-origin:0% 0%;
+      -ms-transform-origin:0% 0%;
+          transform-origin:0% 0%;
+  -webkit-transform: rotate(40deg);
+      -ms-transform: rotate(40deg);
+          transform: rotate(40deg);
+}
+
+#box2 {
+  background: #16d87e;
+  -webkit-transform: rotateX(40deg) translateX(400px);
+          transform: rotateX(40deg) translateX(400px);
+}

@@ -182,7 +182,7 @@ It must appear as the fist function, for example:
 
 ## Perspective Origin
 
-[HTML](origin.html) | [CSS](origin.css)
+[HTML](perspective-origin.html) | [CSS](perspective-origin.css)
 
 Changing the vanishing point, i.e. changing _our_ perspective. Default perspective origin is center.
 But could be for example, top left, top, top right, etc.
@@ -201,5 +201,39 @@ For example to make user's view up to the top and left of the 3D scene:
   perspective: 500px;
   perspective-origin:left top;
 }
+```
 
-`perspective-origin:100% 100%` be bottom right.
+`perspective-origin:100% 100%` is right bottom.
+
+## Transform Origin
+
+[HTML](transform-origin.html) | [CSS](transform-origin.css)
+
+By default, transform origin is located in the center of the object being transformed.
+
+`transform-origin` property _must_ go together on same element having `transform` property, they go together.
+
+Units can be pixesl or percentages.
+Recommend using percentage because that allows moving origin point in proportion to size of element.
+
+For example, to make origin point the left top corner:
+
+```css
+#box1 {
+  background: #d81670;
+  transform-origin:0% 0%;
+  transform: rotate(40deg);
+}
+```
+
+To make origin the right bottom corner:
+
+```css
+#box1 {
+  background: #d81670;
+  transform-origin:100% 100%;
+  transform: rotate(40deg);
+}
+```
+
+Note: `rotate(40deg)`, with no X, Y or Z specified rotates the object in 2D space.
