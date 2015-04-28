@@ -10,6 +10,9 @@
     - [Scale](#scale)
     - [Rotate](#rotate)
   - [3D Perspective](#3d-perspective)
+    - [Perspective Origin](#perspective-origin)
+    - [Transform Origin](#transform-origin)
+    - [Preserve 3D](#preserve-3d)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -180,7 +183,7 @@ It must appear as the fist function, for example:
   }
   ```
 
-## Perspective Origin
+### Perspective Origin
 
 [HTML](perspective-origin.html) | [CSS](perspective-origin.css)
 
@@ -205,7 +208,15 @@ For example to make user's view up to the top and left of the 3D scene:
 
 `perspective-origin:100% 100%` is right bottom.
 
-## Transform Origin
+
+|   Position   | Percentage |
+|:------------:|:----------:|
+|   left top   |    0% 0%   |
+|   right top  |   100% 0%  |
+|  left bottom |   0% 100%  |
+| right bottom | 100% 100%  |
+
+### Transform Origin
 
 [HTML](transform-origin.html) | [CSS](transform-origin.css)
 
@@ -237,3 +248,29 @@ To make origin the right bottom corner:
 ```
 
 Note: `rotate(40deg)`, with no X, Y or Z specified rotates the object in 2D space.
+
+### Preserve 3D
+
+Allow child elements to be transformed _independently_ of the parent.
+
+In the example below, setting `preserve-3D` on the parent element allows the child to be rotated differently than the parent.
+
+```html
+<div id="box1">
+  <div id="childEl"></div>
+</div>
+```
+
+```css
+body {
+  perspective: 500px;
+  perspective-origin: 100% 100%;
+}
+#box1 {
+  transform: rotateX(40deg) translateX(400px);
+  transform-style: preserve-3D;
+}
+#childEl {
+  transform: rotateX(80deg);
+}
+```
