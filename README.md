@@ -13,6 +13,9 @@
     - [Perspective Origin](#perspective-origin)
     - [Transform Origin](#transform-origin)
     - [Preserve 3D](#preserve-3d)
+  - [Building a 3D Cube](#building-a-3d-cube)
+    - [3D Gotcha](#3d-gotcha)
+    - [Cube Part 1](#cube-part-1)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -274,3 +277,25 @@ body {
   transform: rotateX(80deg);
 }
 ```
+
+## Building a 3D Cube
+
+### 3D Gotcha
+
+[HTML](gotcha.html) | [CSS](gotcha.css)
+
+Translate functions are _relative_ to the object itself.
+So if you first rotate an object, say 90deg in the Y axis, then apply translateX, it will move in the Z axis,
+which is now the object's _local_ axis.
+
+Most of the time, want to stick with the _global_ axes  (i.e. X moves left to right, Y top to bottom, etc).
+To achive this, always translate first, then apply other transformations such as rotate.
+
+### Cube Part 1
+
+[HTML](cube/cube1.html) | [CSS](cube/cube1.css)
+
+Cube div is empty, functions as a container to group all of the "planes" together,
+which represent the faces of the cube. In this way, the cube can be rotated, which will rotate all the planes together.
+
+Make all the faces `absolute` positioning, so that transforms can start from same position, this is easier to manage.
