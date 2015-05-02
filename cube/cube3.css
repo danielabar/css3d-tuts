@@ -22,6 +22,8 @@ body{
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
   position: relative;
+  -webkit-transition: all 2s;
+          transition: all 2s;
 }
 
 .face {
@@ -69,12 +71,23 @@ body{
           transform: translateX(100px) rotateY(90deg);
 }
 
-/* Only apply the animation when user hovers over teh animate link */
+/* Transition Approach */
 #anim:hover + #viewport > #cube {
+  -webkit-transform: translateX(400px) rotateX(-290deg) rotateY(150deg) rotateZ(130deg);
+          transform: translateX(400px) rotateX(-290deg) rotateY(150deg) rotateZ(130deg);
+}
+
+/* Keyframe Approach: Apply the animation when user hovers over the animate link */
+/* #animCrazy:hover + #viewport > #cube {
   -webkit-animation: RotateCrazy 3s infinite alternate;
           animation: RotateCrazy 3s infinite alternate;
 }
 
+#animRegular:hover + #viewport > #cube {
+  -webkit-animation: Rotate 2.4s infinite;
+          animation: Rotate 2.4s infinite;
+}
+ */
 @-webkit-keyframes Rotate {
   0% { -webkit-transform: rotateY(0deg); transform: rotateY(0deg); }
   20% { -webkit-transform: rotateY(30deg); transform: rotateY(30deg); }

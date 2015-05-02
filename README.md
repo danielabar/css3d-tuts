@@ -16,7 +16,10 @@
   - [Building a 3D Cube](#building-a-3d-cube)
     - [3D Gotcha](#3d-gotcha)
     - [Cube Part 1](#cube-part-1)
-    - [Cube Part 2](#cube-part-2)
+    - [Cube Part 2: Perspective](#cube-part-2-perspective)
+    - [Cube Part 3: Animation](#cube-part-3-animation)
+      - [Keyframes](#keyframes)
+      - [Transitions](#transitions)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -345,6 +348,8 @@ The correct positive/negative rotation to make the text be upright depends on wh
 
 [HTML](cube/cube3.html) | [CSS](cube/cube3.css)
 
+#### Keyframes
+
 Start by setting up a timeline. Timeline consists of frames, where each frame is like a page in a flip book.
 
 Keyframes are a technique to program certain points within the timeline,
@@ -394,5 +399,29 @@ Can apply the animation class interactively via css, for example, when user hove
   70% { transform: rotateY(210deg) rotateZ(120deg); }
   100% { transform: rotateY(360deg); }
 }
-
 ```
+
+#### Transitions
+
+In the last example, the cube "snaps" back into place at the end of keyframe animation.
+
+CSS `transition` can be used instead for a smoother effect (and less processor intensive which is more mobile friendly).
+
+`transition: all` specifies that all properties that are animatable should be. This example transitions the `transform` property on hover:
+
+```css
+#cube {
+  width: 100%;
+  height: 100%;
+  transform: rotateX(0deg) rotateY(0deg);
+  transform-style: preserve-3d;
+  position: relative;
+  transition: all 2s;
+}
+
+#anim:hover + #viewport > #cube {
+  transform: translateX(400px) rotateX(-290deg) rotateY(150deg) rotateZ(130deg);
+}
+```
+
+Transitions are less flexible than animations, but smoother. Also animations have to redraw every frame.
