@@ -16,6 +16,7 @@
   - [Building a 3D Cube](#building-a-3d-cube)
     - [3D Gotcha](#3d-gotcha)
     - [Cube Part 1](#cube-part-1)
+    - [Cube Part 2](#cube-part-2)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -334,3 +335,8 @@ Then use absolute positioning and margins for centering:
 To make the cube rotate about its center, need to set its height, otherwise it defaults to 0 and rotates about the top axis.
 
 Change cube and face divs to have width and height 100%, so they automatically scale to viewport width and height.
+
+Adding text to each face - front and right faces look ok, but left face text is reversed.
+Switch X rotation to negative degrees to fix it.
+
+The correct positive/negative rotation to make the text be upright depends on what sequence the cube will be animated in.
