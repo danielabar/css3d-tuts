@@ -299,3 +299,10 @@ Cube div is empty, functions as a container to group all of the "planes" togethe
 which represent the faces of the cube. In this way, the cube can be rotated, which will rotate all the planes together.
 
 Make all the faces `absolute` positioning, so that transforms can start from same position, this is easier to manage.
+
+No rotation needed for front face because we're in top view by default.
+
+Note in browser, _positive_ translateY value makes the object go _down_,
+and _negative_ translateY value makes the object to _up_. (opposite of Blender).
+
+translateX with negative value will move the object to the left, positive value will go to the right. (same as Blender).
