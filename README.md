@@ -308,7 +308,7 @@ and _negative_ translateY value makes the object to _up_. (opposite of Blender).
 
 translateX with negative value will move the object to the left, positive value will go to the right. (same as Blender).
 
-### Cube Part 2
+### Cube Part 2: Perspective
 
 [HTML](cube/cube2.html) | [CSS](cube/cube2.css)
 
@@ -340,3 +340,59 @@ Adding text to each face - front and right faces look ok, but left face text is 
 Switch X rotation to negative degrees to fix it.
 
 The correct positive/negative rotation to make the text be upright depends on what sequence the cube will be animated in.
+
+### Cube Part 3: Animation
+
+[HTML](cube/cube3.html) | [CSS](cube/cube3.css)
+
+Start by setting up a timeline. Timeline consists of frames, where each frame is like a page in a flip book.
+
+Keyframes are a technique to program certain points within the timeline,
+and css does the interpolation between these points automatically. For example, to animate a background color change:
+
+```css
+@keyframes Foo {
+  from { background: #25064C; }
+  20% { background: #36175E; }
+  40% { background: #553285; }
+  60% { background: #7B52AB; }
+  80% { background: #7B52AB; }
+  to { background: #9768D1; }
+}
+```
+
+`from` is equivalent to 0% and `to` is equivalent to 100%. But don't need this, could start say at 20%.
+
+By itself, keyframes doesn't do anything, must set it as `animation` property of element. For example:
+
+```css
+#front {
+  -webkit-animation: Rotate 3s infinite alternate;
+          animation: Rotate 3s infinite alternate;
+}
+```
+
+Can apply the animation class interactively via css, for example, when user hovers over a link:
+
+```html
+<a href="#" id="anim">Animate</a>
+<div id="viewport">
+  <div id="cube">
+    All the faces are here...
+  </div>
+</div>
+```
+
+```css
+#anim:hover + #viewport > #cube {
+  animation: RotateCrazy 3s infinite alternate;
+}
+
+@keyframes RotateCrazy {
+  0% { transform: rotateY(0deg); }
+  20% { transform: rotateY(30deg) rotateX(50deg); }
+  70% { transform: rotateY(210deg) rotateZ(120deg); }
+  100% { transform: rotateY(360deg); }
+}
+
+```
