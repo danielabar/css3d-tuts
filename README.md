@@ -306,3 +306,31 @@ Note in browser, _positive_ translateY value makes the object go _down_,
 and _negative_ translateY value makes the object to _up_. (opposite of Blender).
 
 translateX with negative value will move the object to the left, positive value will go to the right. (same as Blender).
+
+### Cube Part 2
+
+[HTML](cube/cube2.html) | [CSS](cube/cube2.css)
+
+By default, viewport width is entire width of the browser, and height is 0,
+so cube looks "stuck" to the left hand side of the page.
+The reason the cube shows at all despite viewport height of 0 is that overflow is set to visible by default.
+
+To get the cube to render exactly in the center, need to set width and height on viewport to be same as the cube.
+Then use absolute positioning and margins for centering:
+
+```css
+#viewport {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -100px 0 0 -100px;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+}
+```
+
+To make the cube rotate about its center, need to set its height, otherwise it defaults to 0 and rotates about the top axis.
+
+Change cube and face divs to have width and height 100%, so they automatically scale to viewport width and height.
