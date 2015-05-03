@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Impress Example</title>
+  <meta name="description" content=" " />
+  <meta name="author" content=" " />
+  <meta name="HandheldFriendly" content="true" />
+  <meta name="MobileOptimized" content="320" />
+  <!-- Use maximum-scale and user-scalable at your own risk. It disables pinch/zoom. Think about usability/accessibility before including.-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+  <link rel="stylesheet" type="text/css" href="impress-example.css">
+</head>
+
+<body>
+
+  <!-- Controls -->
+  <a href="#" id="nxt">Next</a>
+  <a href="#" id="prv">Previous</a>
+  <a href="#" id="end">End</a>
+
+  <!-- Create the presentation -->
+  <div id="impress">
+
+    <!-- Create the presentation steps -->
+
+    <div class="step box" data-x="300" data-y="400" data-z="400">
+      <h1>I am the first step</h1>
+    </div>
+
+    <div class="step box" data-rotate-y="40" data-rotate-x="90" data-rotate-z="10" data-rotate>
+      <h2>Hello World!</h2>
+    </div>
+
+    <div class="step" data-scale="4" data-x="2000" id="last-slide">
+      <h1>Scale ME!</h1>
+      <img src="Envato.jpg" alt="Envato" width="350" height="219">
+    </div>
+
+  </div><!--//presentation-->
+
+  <!-- Vendor -->
+  <script src="vendor/impress-js/js/impress.js"></script>
+  <script>impress().init();</script>
+  <script src="my-presentation.js"></script>
+</body>
+
+</html>

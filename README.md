@@ -13,13 +13,14 @@
     - [Perspective Origin](#perspective-origin)
     - [Transform Origin](#transform-origin)
     - [Preserve 3D](#preserve-3d)
-  - [Building a 3D Cube](#building-a-3d-cube)
+  - [a 3D Cube](#a-3d-cube)
     - [3D Gotcha](#3d-gotcha)
     - [Cube Part 1](#cube-part-1)
     - [Cube Part 2: Perspective](#cube-part-2-perspective)
     - [Cube Part 3: Animation](#cube-part-3-animation)
       - [Keyframes](#keyframes)
       - [Transitions](#transitions)
+  - [Libraries](#libraries)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -282,7 +283,7 @@ body {
 }
 ```
 
-## Building a 3D Cube
+##  a 3D Cube
 
 ### 3D Gotcha
 
@@ -425,3 +426,12 @@ CSS `transition` can be used instead for a smoother effect (and less processor i
 ```
 
 Transitions are less flexible than animations, but smoother. Also animations have to redraw every frame.
+
+## Libraries
+
+See example [2D transitions with modal](http://tympanus.net/codrops/2013/06/25/nifty-modal-window-effects/).
+
+[Impress.js](https://github.com/bartaz/impress.js/) can be used to build 3D presentations using just css, javascript and html.
+As a developer, only need to manipulate data attributes of dom element to get the 3D effects.
+
+[HTML](impress/impress-example.html) | [CSS](impress/impress-example.css)

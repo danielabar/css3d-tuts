@@ -1,0 +1,21 @@
+{
+  "name": "modal",
+  "version": "0.0.0",
+  "homepage": "https://github.com/danielabar/css3d-tuts",
+  "dependencies" : {
+    "impress-js": "https://github.com/bartaz/impress.js.git#0.5.3"
+  },
+  "authors": [
+    "danielabar"
+  ],
+  "description": "Modal 3D",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "vendor",
+    "test",
+    "tests"
+  ]
+}
