@@ -3,6 +3,9 @@
     "browser",
     "ecma5"
   ],
+  "loadEagerly": [
+    "oridomi/vendor/oridomi/oridomi.js"
+  ],
   "plugins": {
     "complete_strings": {},
     "doc_comment": {

@@ -1,0 +1,12 @@
+body{
+  font-family: Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+#accord {
+  width: 400px;
+  height: 150px;
+  background: #43cfd3;
+  color: #050709;
+  text-align: center;
+  font-size: 2em;
+}

@@ -1,0 +1,21 @@
+{
+  "name": "modal",
+  "version": "0.0.0",
+  "homepage": "https://github.com/danielabar/css3d-tuts",
+  "dependencies" : {
+    "oridomi": "https://github.com/dmotz/oriDomi.git#1.1.5"
+  },
+  "authors": [
+    "danielabar"
+  ],
+  "description": "Modal 3D",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "vendor",
+    "test",
+    "tests"
+  ]
+}

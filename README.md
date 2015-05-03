@@ -21,6 +21,8 @@
       - [Keyframes](#keyframes)
       - [Transitions](#transitions)
   - [Libraries](#libraries)
+    - [Impress.js](#impressjs)
+    - [Oridomi.js](#oridomijs)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -431,7 +433,17 @@ Transitions are less flexible than animations, but smoother. Also animations hav
 
 See example [2D transitions with modal](http://tympanus.net/codrops/2013/06/25/nifty-modal-window-effects/).
 
+### Impress.js
+
+[HTML](impress/impress-example.html) | [CSS](impress/impress-example.css) | [JS](impress/my-presentation.js)
+
 [Impress.js](https://github.com/bartaz/impress.js/) can be used to build 3D presentations using just css, javascript and html.
 As a developer, only need to manipulate data attributes of dom element to get the 3D effects.
 
-[HTML](impress/impress-example.html) | [CSS](impress/impress-example.css)
+### Oridomi.js
+
+[HTML](oridomi/oridomi-example.html) | [CSS](oridomi/oridomi-example.css) | [JS](oridomi/app.js)
+
+[Oridomi.js](http://oridomi.com/) to fold up DOM elements like paper, and can help in displaying menus.
+
+Recommended to give all elements a width and height before Oridomi loads.
